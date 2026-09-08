@@ -1,2 +1,10 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+print ("Welcome to practice class 29 june 2026")
+Mobliename=input("Enter your moblie name")
+print("Your mobile name is:")
+print (type(mobliename))
+ for i in mobliname:
+print(i)
+#My code ends here
+moblieprice=input("Enter your moblie price")
+print(type(moblieprice))
+

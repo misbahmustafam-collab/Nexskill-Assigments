@@ -1,0 +1,125 @@
+import numpy as np
+price,bed,street,long,lat = np.genfromtxt('C:\\Users\\HI\\Documents\\GitHub\\Nexskill-Ai-course-Bin\\RealEstate-USA.csv', delimiter=',',usecols=(0,3,2,4,5), unpack=True, skip_header=1)
+
+print(price)
+print(bed)
+print(street)
+
+print(np.min(price))
+
+#RealEstate price - statistics operations
+print("RealEstate price mean:",np.mean(price))
+print("RealEstate price average:",np.average(price))
+print("RealEstate price std:",np.std(price))
+print("RealEstate price mod:",np.median(price))
+print("RealEstate price percentile-10:",np.percentile(price,10))
+print("RealEstate price percentile-13:",np.percentile(price,13))
+print("RealEstate price percentile-12:", np.percentile(price,12))
+print("RealEstate price min:", np.min(price))
+print("RealEstate price max:", np.max(price))
+
+
+
+#
+#RealEsRealEstate-USA.csvtate-USA.csv maths operations
+print("RealEstate price square:",np.square(price))
+print("RealEstate price sqrt:",np.sqrt(price))
+print("RealEstate price pw:", np.power(price, 2))
+
+#RealEstate perform basic arthemtic operations
+addition = bed + price
+subtraction = bed- price
+multiplication = bed*price
+division=bed/price
+
+
+print("RealEstate bed-price-addition:",addition)
+print("RealEstate bed - price - subtraction:",subtraction)
+print("RealEstate bed-price -multiplication:",multiplication)
+print("RealEstate bed -price - division:",division)
+
+#trigonometric operations
+pricepie=(price/np.pi)+1
+#calculate sine,cosine,and tangent
+sine_values=np.sin(pricepie)
+cosine_values=np.cos(pricepie)
+tangent_values=np.tan(pricepie)
+
+
+print("RealEstate price - div- pie - sine values:",sine_values)
+print("RealEstate price -div - pie cosine values:",cosine_values)
+print("RealEstate price -div - pie tangent values:",tangent_values)
+
+print("RealEstate price - div - pie - exponential values:", np.exp(pricepie))
+
+#calculate the natural lograithm and base-10 logarthim
+log_array = np.log(pricepie)
+log10_array = np.log10(pricepie)
+
+
+print("RealEstate price -div - pie - natural lograithm values:",log_array)
+print("RealEstate price-div-pie = Base-10 lograithm values:",log10_array)
+
+#Example: hyperbolic sine
+# calculate the hyperbolic sine of each element
+sinh_values=np.sinh(pricepie)
+print("RealEstate price - div - pie - hyperbolic sine values:",sinh_values)
+
+
+sinh_values-np.sinh(pricepie)
+print("RealEstate price-div-pie-hyperbolic sine values:",sinh_values)
+
+
+#Hyperbolic tangent using cosh() Function
+#calculate the hyperbolic tangent of each element
+tanh_values=np.tanh(pricepie)
+print("RealEstate price-div-pie-Hyperbolic tangent values:", tanh_values)
+
+#Example: inverse Hyperbolic cosine
+#calculate the inverse hyperbolic cosine of each element
+arccosh_values = np.arccosh(pricepie)
+print("RealEstate price-div-pie -inverse Hyperbolic cosine values:", arccosh_values)
+
+
+#RealEstate long plus lat - 2 dimentional array
+D2longlat=np.array([long,lat])
+print("RealEstate Long plus Lat - 2 dimentional array-",D2longlat)
+
+#check the Dimentional array1
+print("RealEstate Long plus lat -2 dimentional array - dimension", D2longlat.ndim)
+
+#output 2
+#return total number of elements in array 1
+print("RealEstate long plus lat 2 dimentional array total number of elements ,D2longlat/size")
+#output 6
+# return a tuple that gives size of array in each dimension
+print("RealEstate long plus lat - 2 dimentional array - data type", D2longlat.dtype)
+#output:int64
+#splicing array
+D2longlatslice=D2longlat[0:1:1,1:5:1]
+print("RealEstate long plus lat 2 dimentional array - splicing array - D2longlat[:1,:5]",D2longlatslice)
+D2longlatslice2= D2longlat[:1,4:15:4]
+print("RealEstate long plus lat - 2 dimentional array - splicing array -D2longlat[:1,4:15:4]",D2longlatslice2)
+#indexing array
+D2longlatSlice2ItemOnly = D2longlat[0,1]
+print("RealEstate long plus lat - 2 dimentional array - indexing array - D2longlat[0,1]", D2longlatSlice2ItemOnly)
+#You should use the builtin function nditer,if you don't need to have the indexes values
+for index,elem in np.ndenumerate(D2longlat):
+    print(index,elem)
+
+# for loop
+rows = D2longlat.shape[0]
+cols = D2longlat.shape[1]
+
+for i in range(rows):
+    for j in range(cols):
+        print(D2longlat[i][j])   # ya print(D2longlat[i, j])
+
+print("Rows:", rows)
+print("Cols:", cols)
+
+
+longlat1T0298=np.reshape(D2longlat,(1,100))
+print("RealEstate long plus lat - 2 dimentional array -np.reshape(D2longlat,(1,100)):",longlat1T0298)
+print("RealEstate long plus lat - 2 dimentional array-np.reshape(D2longlat,(1,100)):size ",longlat1T0298)
+print("RealEstate long plus lat -2 dimentional array-np.reshape(D2longlat,(1.100):nidm",longlat1T0298)
